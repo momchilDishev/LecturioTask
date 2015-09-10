@@ -1,0 +1,66 @@
+﻿@charset "UTF-8";
+$font-family: "Proxima Nova";
+$font-size: 18px; //text
+$font-colour: #2d2d2d; //black
+$border-colour: #d6d6d6; //gray
+$line-height: 120%;
+$img-src: url("../img/coursePic.png");
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+    color: $font-colour;
+    line-height: $line-height;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.img-responsive {
+    content: $img-src;
+}
+
+.submenu-container {
+    label {
+        -webkit-appearance: push-button;
+        -moz-appearance: button;
+        display: inline-block;
+        margin: 60px 0 10px 0;
+        cursor: pointer;
+    }
+
+    input[type=checkbox] {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    input[type=checkbox]:checked ~ .submenu {
+        display: block;
+    }
+
+    .submenu {
+        display: none;
+        border-color: $border-colour;
+        border-width: 3px;
+        background: white;
+        width: 200px;
+        height: 100px;
+        line-height: 100px;
+        color: $font-colour;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            display: block;
+        }
+    }
+}
+
+.rating-container:after {
+    content: "\e200";
+}
+
+.progress-bar {
+    width: 30%;
+}
