@@ -26,23 +26,25 @@
   left: -9999px;
 }
 
-.submenu-container input[type=checkbox]:checked ~ .submenu {
+.submenu-container input[type=checkbox]:checked ~ #submenu {
   display: block;
 }
 
-.submenu-container .submenu {
+.submenu-container #submenu {
   display: none;
+  border: 3px solid;
   border-color: #d6d6d6;
   border-width: 3px;
   background: white;
-  width: 200px;
+  width: 100px;
   height: 100px;
-  line-height: 100px;
+  line-height: 20px;
+  font-size: 14px;
   color: #2d2d2d;
   text-align: center;
 }
 
-.submenu-container .submenu a {
+.submenu-container #submenu a {
   text-decoration: none;
   display: block;
 }

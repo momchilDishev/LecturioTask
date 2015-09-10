@@ -1,6 +1,7 @@
 ﻿@charset "UTF-8";
 $font-family: "Proxima Nova";
 $font-size: 18px; //text
+$small-text: 14px;
 $font-colour: #2d2d2d; //black
 $border-colour: #d6d6d6; //gray
 $line-height: 120%;
@@ -35,18 +36,20 @@ body {
         left: -9999px;
     }
 
-    input[type=checkbox]:checked ~ .submenu {
+    input[type=checkbox]:checked ~ #submenu {
         display: block;
     }
 
-    .submenu {
+    #submenu {
         display: none;
+        border: 3px solid;
         border-color: $border-colour;
         border-width: 3px;
         background: white;
-        width: 200px;
+        width: 100px;
         height: 100px;
-        line-height: 100px;
+        line-height: 20px;
+        font-size: $small-text;
         color: $font-colour;
         text-align: center;
 
