@@ -2,9 +2,9 @@
 
 $font-family: "Proxima Nova";
 $font-size: 14px; //body text
-$small-heading: 18px;
+$small-heading: 30px;
+$text-underheadline: 18px;
 $font-colour: #2d2d2d; //black
-$border-colour: #d6d6d6; //gray
 $line-height: 120%;
 $img-src: url("../img/coursePic.png");
 $text-muted: #f3f3f3;
@@ -20,15 +20,13 @@ body {
     box-sizing: border-box;
 
     .titles {
-        .title-1 {
-            padding-top: 3px;
-        }
+        width: 80%;
 
         span {
             font-size: $small-heading;
-            padding: 3px;
+            padding: 8px;
             display: inline-block;
-            width: 150px;
+            width: 180px;
             white-space: nowrap;
             overflow: hidden !important;
             -ms-text-overflow: ellipsis;
@@ -43,11 +41,14 @@ body {
 }
 
 .submenu-container {
+    width: 20%;
+    float: right;
+
     label {
-        display: inline-block;
-        cursor: pointer;
+        margin-top: -60px;
+        margin-right: 10px;
+        font-size: x-large;
         float: right;
-        line-height: 20px;
 
         i {
             font-family: 'Glyphicons Halflings';
@@ -63,24 +64,18 @@ body {
     input[type=checkbox]:checked ~ #submenu {
         display: block;
         position: absolute;
-        left: 100px;
     }
 
     #submenu {
         display: none;
-        border: 1px solid;
-        border-radius: 2px;
-        border-color: $border-colour;
-        background: white;
-        width: 135px;
-        height: 64px;
-        line-height: 20px;
+        width: 165px;
+        margin-top: -50px;
+        margin-left: 20px;
         color: $font-colour;
-        text-align: left;
-        box-shadow: 1px 1px;
+        box-shadow: rgba(0,0,0,0.4) 1px 1px;
 
         a {
-            padding: 4px;
+            padding: 11px;
             text-decoration: none;
             color: $font-colour;
         }
@@ -92,18 +87,19 @@ body {
     }
 }
 
-.info-2 {
-    padding: 3px;
+.info-2, .info-1 {
+    padding: 8px;
 }
 
 .info-1 {
     width: 100%;
-    padding: 3px;
+    font-size: $text-underheadline;
 
     .info-1-a, info-1-b {
         display: inline-block;
         width: 50%;
         float: left;
+
 
         .glyphicon {
             color: $orange;
