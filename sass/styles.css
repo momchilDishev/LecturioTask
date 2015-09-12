@@ -75,11 +75,16 @@ body .titles span {
   color: #59a831;
 }
 
-.info-2, .info-1 {
+.info-2 {
   padding: 8px;
 }
 
+.info-2 span {
+  color: #9f9f9f;
+}
+
 .info-1 {
+  padding: 8px;
   width: 100%;
   font-size: 18px;
 }

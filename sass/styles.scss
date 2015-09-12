@@ -5,9 +5,9 @@ $font-size: 14px; //body text
 $small-heading: 30px;
 $text-underheadline: 18px;
 $font-colour: #2d2d2d; //black
-$line-height: 120%;
 $img-src: url("../img/coursePic.png");
-$text-muted: #f3f3f3;
+$text-muted: #9f9f9f;
+$line-height: 120%;
 $orange: #ffae00;
 
 body {
@@ -87,11 +87,16 @@ body {
     }
 }
 
-.info-2, .info-1 {
+.info-2 {
     padding: 8px;
+
+    span {
+        color: $text-muted;
+    }
 }
 
 .info-1 {
+    padding: 8px;
     width: 100%;
     font-size: $text-underheadline;
 
