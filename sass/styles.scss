@@ -2,7 +2,6 @@
 
 $font-family: "Proxima Nova";
 $font-size: 14px; //body text
-$small-heading: 30px;
 $text-underheadline: 18px;
 $font-colour: #2d2d2d; //black
 $img-src: url("../img/coursePic.png");
@@ -13,40 +12,36 @@ $orange: #ffae00;
 body {
     font-family: $font-family;
     font-size: $font-size;
+    font-weight: 400;
     color: $font-colour;
     line-height: $line-height;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
-    .titles {
-        width: 80%;
+    .img-responsive {
+    content: $img-src;
+}
 
-        span {
-            font-size: $small-heading;
-            padding: 8px;
-            display: inline-block;
-            width: 180px;
-            white-space: nowrap;
-            overflow: hidden !important;
-            -ms-text-overflow: ellipsis;
-            -o-text-overflow: ellipsis;
-            text-overflow: ellipsis;
-        }
+    .title {
+        width: 80%;
+        padding: 8px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden !important;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
     }
 }
 
-.img-responsive {
-    content: $img-src;
-}
+
 
 .submenu-container {
     width: 20%;
     float: right;
 
     label {
-        margin-top: -60px;
-        margin-right: 10px;
         font-size: x-large;
         float: right;
 
@@ -62,15 +57,14 @@ body {
     }
 
     input[type=checkbox]:checked ~ #submenu {
-        display: block;
+        display: none; //or block
         position: absolute;
     }
 
     #submenu {
+        font-size: $font-size;
         display: none;
         width: 165px;
-        margin-top: -50px;
-        margin-left: 20px;
         color: $font-colour;
         box-shadow: rgba(0,0,0,0.4) 1px 1px;
 
@@ -98,7 +92,7 @@ body {
 .info-1 {
     padding: 8px;
     width: 100%;
-    font-size: $text-underheadline;
+
 
     .info-1-a, info-1-b {
         display: inline-block;

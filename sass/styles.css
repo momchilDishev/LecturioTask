@@ -1,6 +1,7 @@
 ﻿body {
   font-family: "Proxima Nova";
   font-size: 14px;
+  font-weight: 400;
   color: #2d2d2d;
   line-height: 120%;
   -moz-box-sizing: border-box;
@@ -8,24 +9,19 @@
   box-sizing: border-box;
 }
 
-body .titles {
-  width: 80%;
+body .img-responsive {
+  content: url("../img/coursePic.png");
 }
 
-body .titles span {
-  font-size: 30px;
+body .title {
+  width: 80%;
   padding: 8px;
   display: inline-block;
-  width: 180px;
   white-space: nowrap;
   overflow: hidden !important;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-}
-
-.img-responsive {
-  content: url("../img/coursePic.png");
 }
 
 .submenu-container {
@@ -34,8 +30,6 @@ body .titles span {
 }
 
 .submenu-container label {
-  margin-top: -60px;
-  margin-right: 10px;
   font-size: x-large;
   float: right;
 }
@@ -51,15 +45,14 @@ body .titles span {
 }
 
 .submenu-container input[type=checkbox]:checked ~ #submenu {
-  display: block;
+  display: none;
   position: absolute;
 }
 
 .submenu-container #submenu {
+  font-size: 14px;
   display: none;
   width: 165px;
-  margin-top: -50px;
-  margin-left: 20px;
   color: #2d2d2d;
   box-shadow: rgba(0, 0, 0, 0.4) 1px 1px;
 }
@@ -86,7 +79,6 @@ body .titles span {
 .info-1 {
   padding: 8px;
   width: 100%;
-  font-size: 18px;
 }
 
 .info-1 .info-1-a, .info-1 info-1-b {
