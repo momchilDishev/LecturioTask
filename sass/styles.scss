@@ -20,18 +20,21 @@ body {
     box-sizing: border-box;
 
     .img-responsive {
-    content: $img-src;
-}
+        content: $img-src;
+    }
 
     .title {
         width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 16px; /* fallback */
+        max-height: 100px; /* fallback */
+        -webkit-line-clamp: 2; /* number of lines to show */
+        -webkit-box-orient: vertical;
         padding: 8px;
-        display: inline-block;
-        white-space: nowrap;
-        overflow: hidden !important;
         -ms-text-overflow: ellipsis;
         -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
     }
 }
 
@@ -57,7 +60,7 @@ body {
     }
 
     input[type=checkbox]:checked ~ #submenu {
-        display: none; //or block
+        display: block; //or block
         position: absolute;
     }
 
@@ -69,7 +72,6 @@ body {
         box-shadow: rgba(0,0,0,0.4) 1px 1px;
 
         a {
-            padding: 11px;
             text-decoration: none;
             color: $font-colour;
         }
