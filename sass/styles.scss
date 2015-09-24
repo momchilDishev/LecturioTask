@@ -4,6 +4,7 @@ $font-family: "Proxima Nova";
 $font-size: 14px;
 $text-underheadline: 18px;
 $LGrey: #2d2d2d;
+$LGreen: #59a831;
 $img-src: url("../img/coursePic.png");
 $text-muted: #9f9f9f;
 $line-height: 22px;
@@ -63,20 +64,77 @@ body {
                 text-overflow: ellipsis;
             }
         }
+
+        .course-text {
+            height: $height;
+            overflow: hidden;
+            line-height: 155%;
+            white-space: nowrap;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            margin: 0 7px 21px;
+        }
+
+        .rating-price {
+            padding: 8px;
+            height: $height;
+
+            .rating-container{
+                width: 200px;
+                display: inline-block;
+                font-size: $font-size;
+                float:left;
+
+                .glyphicon {
+                    color: $orange;
+                    float:left;
+                }
+
+                .votes-number {
+                    display: inline-block;
+                }
+            }
+
+            .price-container {
+                display: inline-block;
+                font-size: $font-size;
+                float: right;
+
+                .course-price {
+                    white-space: nowrap;
+                    color: $LGreen;
+                }
+            }
+        }
     }
 }
 
+}
+
 .available {
-    #submenu {
+    .submenu-container {
         display: none;
     }
 
     #pb {
         display: none;
     }
+
+    .rating-price {
+        display: inline-block;
+    }
+
+    .info-b {
+        display: none;
+    }
 }
 
 .started {
+
+    .course-text {
+        display: none;
+    }
 
     .submenu-container {
         width: 10%;
@@ -86,6 +144,7 @@ body {
         label {
             font-size: x-large;
             float: right;
+            color: $LGrey;
 
             i {
                 font-family: 'Glyphicons Halflings';
@@ -117,67 +176,39 @@ body {
 
             a:hover {
                 text-decoration: underline;
-                background-color: #59a831;
+                color: $LGreen;
             }
         }
+    }
+
+    .rating-price {
+        display: none;
+    }
+
+    .pb-text {
+        padding-left: 8px;
     }
 }
 
 .expr {
-
-    .course-text p{
+    .course-text p {
         color: red;
     }
-}
 
-.course-text {
-    height: $height;
-        p {
+    .rating-price {
+        display: none;
     }
-}
-
-.rating-price {
-    height: $height;
-    display: none;
 }
 
 #pb {
-    margin: 8px;
+    margin: 0 8px 8px 8px;
 
     div {
         width: 66%;
     }
 }
 
-}
 
-.course-text {
-    overflow: hidden;
-    line-height: 155%;
-    white-space: nowrap;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    margin: 0 7px 21px;
-}
-
-.rating-price {
-    padding: 8px;
-
-    .rating-container, .price-container {
-        display: inline-block;
-        float: left;
-        font-size: $font-size;
-
-        .course-price {
-            white-space: nowrap;
-        }
-
-        .glyphicon {
-            color: $orange;
-        }
-    }
-}
 
 @media only screen and (max-width: 467px) {
 }

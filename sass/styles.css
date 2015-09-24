@@ -54,11 +54,62 @@ body .course-tile-box .title h2 {
   text-overflow: ellipsis;
 }
 
-.available #submenu {
+body .course-tile-box .course-text {
+  height: 20%;
+  overflow: hidden;
+  line-height: 155%;
+  white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  margin: 0 7px 21px;
+}
+
+body .course-tile-box .rating-price {
+  padding: 8px;
+  height: 20%;
+}
+
+body .course-tile-box .rating-price .rating-container, body .course-tile-box .rating-price .price-container {
+  display: inline-block;
+  font-size: 14px;
+}
+
+body .course-tile-box .rating-price .rating-container .glyphicon, body .course-tile-box .rating-price .price-container .glyphicon {
+  color: #ffae00;
+}
+
+body .course-tile-box .rating-price .rating-container .votes-number, body .course-tile-box .rating-price .price-container .votes-number {
+  display: inline-block;
+  float: left;
+}
+
+body .course-tile-box .rating-price .rating-container .price-container, body .course-tile-box .rating-price .price-container .price-container {
+  float: right;
+}
+
+body .course-tile-box .rating-price .rating-container .price-container .course-price, body .course-tile-box .rating-price .price-container .price-container .course-price {
+  white-space: nowrap;
+  color: #59a831;
+}
+
+.available .submenu-container {
   display: none;
 }
 
 .available #pb {
+  display: none;
+}
+
+.available .rating-price {
+  display: inline-block;
+}
+
+.available .info-b {
+  display: none;
+}
+
+.started .course-text {
   display: none;
 }
 
@@ -71,6 +122,7 @@ body .course-tile-box .title h2 {
 .started .submenu-container label {
   font-size: x-large;
   float: right;
+  color: #2d2d2d;
 }
 
 .started .submenu-container label i {
@@ -103,56 +155,31 @@ body .course-tile-box .title h2 {
 
 .started .submenu-container #submenu a:hover {
   text-decoration: underline;
-  background-color: #59a831;
-}
-
-.started .expr .course-text {
-  color: red;
-}
-
-.started .course-text {
-  height: 20%;
+  color: #59a831;
 }
 
 .started .rating-price {
-  height: 20%;
   display: none;
 }
 
-.started #pb {
-  margin: 8px;
+.started .pb-text {
+  padding-left: 8px;
 }
 
-.started #pb div {
+.expr .course-text p {
+  color: red;
+}
+
+.expr .rating-price {
+  display: none;
+}
+
+#pb {
+  margin: 0 8px 8px 8px;
+}
+
+#pb div {
   width: 66%;
-}
-
-.course-text {
-  overflow: hidden;
-  line-height: 155%;
-  white-space: nowrap;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  margin: 0 7px 21px;
-}
-
-.rating-price {
-  padding: 8px;
-}
-
-.rating-price .rating-container, .rating-price .price-container {
-  display: inline-block;
-  float: left;
-  font-size: 14px;
-}
-
-.rating-price .rating-container .course-price, .rating-price .price-container .course-price {
-  white-space: nowrap;
-}
-
-.rating-price .rating-container .glyphicon, .rating-price .price-container .glyphicon {
-  color: #ffae00;
 }
 
 @media only screen and (max-width: 320px) {
